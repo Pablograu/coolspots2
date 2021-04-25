@@ -1,6 +1,5 @@
 import React from "react";
 import CoolspotsList from "../sections/coolspotsList";
-
 import styles from "../styles/Home.module.css";
 
 const Valencia = () => (
