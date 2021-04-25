@@ -7,7 +7,7 @@ const Valencia = () => (
   <div>
     <main className={styles.main}>
       <h1 className={styles.title}>
-        <a href="https://coolspots.io">
+        <a href="https://coolspotsnext.vercel.app/">
           <img
             src="/coolspots.svg"
             alt="Coolspots Logo"
