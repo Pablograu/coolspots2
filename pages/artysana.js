@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
-import { Text, Link, Heading, Paragraph } from "evergreen-ui";
+import { Text, Link } from "evergreen-ui";
+import Button from "@material-ui/core/Button";
 
 const Artysana = () => (
   <div>
@@ -22,6 +23,9 @@ const Artysana = () => (
       <Link href="https://www.beinglocallyabroad.com/top-5-cafes-with-wifi-in-valencia/">
         Website
       </Link>
+      <Button variant="contained" color="primary">
+        Book
+      </Button>
     </main>
   </div>
 );

@@ -2,10 +2,11 @@ import React from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { Heading, Paragraph } from "evergreen-ui";
+import { Grid } from "@material-ui/core";
 
 function CoolspotsList() {
   return (
-    <div className={styles.grid}>
+    <Grid>
       <Heading size={800} fontFamily="Avenir">
         Locations
       </Heading>
@@ -24,7 +25,7 @@ function CoolspotsList() {
       <Link href="/artysana">
         <a className={styles.card}>Federal – Café</a>
       </Link>
-    </div>
+    </Grid>
   );
 }
 export default CoolspotsList;

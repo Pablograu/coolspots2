@@ -1,41 +1,25 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+//import styles from "../styles/Home.module.css";
 import HeroLanding from "../sections/heroLanding";
-import CoolspotsCityList from "../sections/coolspotsCityList";
+import ListOfCities from "../sections/coolspotsCityList";
+import { Container, Grid } from "@material-ui/core";
 
-export default function Home() {
+import "fontsource-roboto";
+import Header from "../components/header";
+
+export default function Home(city) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Coolspots</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          <a href="https://coolspotsnext.vercel.app/">
-            <img
-              src="/coolspots.svg"
-              alt="Coolspots Logo"
-              className={styles.logo}
-            />
-          </a>
-        </h1>
-
+      <Header />
+      <Container direction="row" justify="space-between" alignItems="center">
         <HeroLanding />
-        <CoolspotsCityList />
-      </main>
 
-      <footer className={styles.footer}>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          Powered by{" "}
-          <img
-            src="/coolspots.svg"
-            alt="Coolspots Logo"
-            className={styles.logo}
-          />
-        </a>
-      </footer>
+        <ListOfCities />
+      </Container>
     </div>
   );
 }

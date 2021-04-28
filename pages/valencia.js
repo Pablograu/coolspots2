@@ -14,6 +14,7 @@ const Valencia = () => (
           />
         </a>
       </h1>
+
       <CoolspotsList />
     </main>
   </div>
