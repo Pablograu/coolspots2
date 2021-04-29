@@ -8,20 +8,24 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Grid } from "@material-ui/core";
-import CityCard from "../components/cityCard";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
   root: {
     maxWidth: 345,
   },
-});
+}));
 
 export default function ListOfCities() {
   const classes = useStyles();
-  const city = ["Padova"];
 
   return (
     <Grid
+      className={classes.cardGrid}
+      maxWidth="md"
       container
       spacing={2}
       direction="row"
@@ -29,34 +33,33 @@ export default function ListOfCities() {
       alignItems="center"
     >
       {/*PADOVA*/}
-      {city.map((city) => (
-        <Grid item xs={12} md={24}>
-          <Card className={classes.root}>
-            <CardActionArea href="/padova">
-              <CardMedia
-                component="img"
-                alt="Padova"
-                height="140"
-                image="https://images.pexels.com/photos/4513657/pexels-photo-4513657.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                title="Padua"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {city}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Description
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                View
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      ))}
+
+      <Grid item xs={12} md={24}>
+        <Card className={classes.root}>
+          <CardActionArea href="/padova">
+            <CardMedia
+              component="img"
+              alt="Padova"
+              height="140"
+              image="https://images.pexels.com/photos/4513657/pexels-photo-4513657.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              title="Padua"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                Padova
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Description
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+            <Button size="small" color="primary">
+              View
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
 
       {/*VALENCIA*/}
       <Grid item xs={12} md={24}>

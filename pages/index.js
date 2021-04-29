@@ -11,7 +11,7 @@ export default function Home(city) {
   return (
     <div>
       <Head>
-        <title>Coolspots</title>
+        <title>coolspots</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />

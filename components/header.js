@@ -1,12 +1,11 @@
-{
-  /*import React from "react";
+import React from "react";
 import styles from "../styles/Home.module.css";
 
 export default function Header() {
   return (
     <div>
       <h1 className={styles.title}>
-        <a href="https://coolspotsnext.vercel.app/">
+        <a href="/">
           <img
             src="/coolspots.svg"
             alt="Coolspots Logo"
@@ -17,8 +16,8 @@ export default function Header() {
     </div>
   );
 }
-*/
-}
+{
+  /*
 import React from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -175,15 +174,9 @@ export default function PrimarySearchAppBar() {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          ></IconButton>
           <Link href="/" color="white">
             <Typography className={classes.title} variant="h6" noWrap>
-              Coolspots
+              coolspots
             </Typography>
           </Link>
           <div className={classes.search}>
@@ -199,12 +192,6 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary"></Badge>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary"></Badge>
-            </IconButton>
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -229,4 +216,6 @@ export default function PrimarySearchAppBar() {
       {renderMenu}
     </div>
   );
+}
+*/
 }
