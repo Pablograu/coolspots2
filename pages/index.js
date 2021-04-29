@@ -2,7 +2,7 @@ import Head from "next/head";
 //import styles from "../styles/Home.module.css";
 import HeroLanding from "../sections/heroLanding";
 import ListOfCities from "../sections/coolspotsCityList";
-import { Container, Grid } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 
 import "fontsource-roboto";
 import Header from "../components/header";

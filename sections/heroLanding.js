@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Paragraph, Button, Heading, Pane } from "evergreen-ui";
+import { Paragraph, Heading, Pane } from "evergreen-ui";
+import { Button } from "@material-ui/core";
 
 function HeroLanding() {
   return (
@@ -12,15 +13,12 @@ function HeroLanding() {
     >
       <Pane>
         <Heading size={900} padding={16} fontFamily="Avenir" color="#424242">
-          The first ever office as a service OaaS
+          The first ever OaaS, office as a service
           <span role="img" aria-label="coffee">
             ☕️
           </span>{" "}
           <span role="img" aria-label="coding">
             👩🏻‍💻
-          </span>{" "}
-          <span role="img" aria-label="group">
-            💃
           </span>{" "}
         </Heading>
 

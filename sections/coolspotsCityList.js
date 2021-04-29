@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 
 export default function ListOfCities() {
   const classes = useStyles();
-  const city = ["Padova", "Valencia"];
+  const city = ["Padova"];
 
   return (
     <Grid
@@ -31,11 +31,34 @@ export default function ListOfCities() {
       {/*PADOVA*/}
       {city.map((city) => (
         <Grid item xs={12} md={24}>
-          <CityCard city={city} cityDescription />
+          <Card className={classes.root}>
+            <CardActionArea href="/padova">
+              <CardMedia
+                component="img"
+                alt="Padova"
+                height="140"
+                image="https://images.pexels.com/photos/4513657/pexels-photo-4513657.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                title="Padua"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {city}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Description
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                View
+              </Button>
+            </CardActions>
+          </Card>
         </Grid>
       ))}
 
-      {/*VALENCIA
+      {/*VALENCIA*/}
       <Grid item xs={12} md={24}>
         <Card className={classes.root}>
           <CardActionArea href="/valencia">
@@ -66,7 +89,6 @@ export default function ListOfCities() {
           </CardActions>
         </Card>
       </Grid>
-      */}
     </Grid>
   );
 }
