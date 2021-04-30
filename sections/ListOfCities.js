@@ -13,6 +13,14 @@ const useStyles = makeStyles((theme) => ({
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
+    display: "grid",
+    gridTemplateAreas: "header header header",
+
+    gridTemplateRows: "60px 1fr 60px",
+    gridTemplateColumns: "20% 1fr 15%",
+    gridGap: "10px",
+    height: "100vh",
+    margin: 0,
   },
   root: {
     maxWidth: 345,
@@ -36,7 +44,7 @@ export default function ListOfCities() {
 
       <Grid item xs={12} md={24}>
         <Card className={classes.root}>
-          <CardActionArea href="/padova">
+          <CardActionArea href="/cities/padova">
             <CardMedia
               component="img"
               alt="Padova"
@@ -64,7 +72,7 @@ export default function ListOfCities() {
       {/*VALENCIA*/}
       <Grid item xs={12} md={24}>
         <Card className={classes.root}>
-          <CardActionArea href="/valencia">
+          <CardActionArea href="/cities/valencia">
             <CardMedia
               component="img"
               alt="Valencia"

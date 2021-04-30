@@ -1,25 +1,26 @@
 import Head from "next/head";
-//import styles from "../styles/Home.module.css";
-import HeroLanding from "../sections/heroLanding";
-import ListOfCities from "../sections/coolspotsCityList";
-import { Container } from "@material-ui/core";
+import ArticleList from '../components/ArticleList'
 
-import "fontsource-roboto";
-import Header from "../components/header";
 
-export default function Home(city) {
+export default function Home({ articles }) {
   return (
     <div>
       <Head>
         <title>coolspots</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Container direction="row" justify="space-between" alignItems="center">
-        <HeroLanding />
-
-        <ListOfCities />
-      </Container>
+      <ArticleList articles={articles} />
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch("https://raw.githubusercontent.com/JacopoContin/coolspots/main/.mockend.json");
+  const articles = await res.json();
+
+  return {
+    props: {
+      articles,
+    },
+  };
+};
