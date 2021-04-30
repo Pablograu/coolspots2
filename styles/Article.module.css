@@ -9,6 +9,7 @@
   
   .card {
     margin: 1rem;
+    width: '600px'; 
     flex-basis: 45%;
     padding: 1.5rem;
     text-align: left;

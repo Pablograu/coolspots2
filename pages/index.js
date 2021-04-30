@@ -9,17 +9,13 @@ export default function Home({ articles }) {
         <title>coolspots</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-
       <ArticleList articles={articles} />
-
-
     </div>
   );
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const res = await fetch("https://raw.githubusercontent.com/JacopoContin/coolspots/main/.mockend.json");
   const articles = await res.json();
 
   return {

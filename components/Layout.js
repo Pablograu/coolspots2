@@ -1,11 +1,10 @@
 import styles from '../styles/Layout.module.css';
 import Navbar from '../components/Navbar';
-import Header from "../components/header";
+import Header from "./Header";
 
 const Layout = ({ children }) => {
     return (
         <>
-
         <Navbar />
         <div className={styles.container}>
             <main className={styles.main}>
