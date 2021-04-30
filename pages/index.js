@@ -1,20 +1,15 @@
 import Head from "next/head";
-//import styles from "../styles/Home.module.css";
 import HeroLanding from "../sections/heroLanding";
-import ListOfCities from "../sections/coolspotsCityList";
+import ListOfCities from "../sections/ListOfCities";
 import { Container } from "@material-ui/core";
 
-import "fontsource-roboto";
-import Header from "../components/header";
-
-export default function Home(city) {
+export default function Home() {
   return (
     <div>
       <Head>
         <title>coolspots</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <Container direction="row" justify="space-between" alignItems="center">
         <HeroLanding />
 

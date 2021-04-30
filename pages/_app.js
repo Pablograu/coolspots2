@@ -1,5 +1,7 @@
 import "../styles/globals.css";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import Header from "../components/header";
+import Navbar from "../components/Navbar";
 
 const theme = createMuiTheme({
   typography: {
@@ -35,7 +37,9 @@ const theme = createMuiTheme({
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />;
+      <Header />
+      <Navbar />
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 }

@@ -4,13 +4,12 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
+import CardActionArea from "@material-ui/core/CardActionArea";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import Link from "@material-ui/core/Link";
-import Header from "../components/header";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -44,16 +43,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-export default function Padova() {
+export default function Valencia() {
   const classes = useStyles();
 
   return (
     <React.Fragment>
       <CssBaseline />
-
-      <Header></Header>
 
       <main>
         {/* Hero unit */}
@@ -66,61 +61,27 @@ export default function Padova() {
               color="textPrimary"
               gutterBottom
             >
-              Metodo Zero
+              Valencia
             </Typography>
-            <Typography
-              variant="h5"
-              align="center"
-              color="textSecondary"
-              paragraph
-            >
-              Metodo Zero Coworking offre a Padova tutto ciò in un ambiente
-              rilassato e confortevole che garantisce sia la privacy che la
-              sicurezza mettendo ogni coworker in grado di confrontarsi con
-              altri, far nascere progetti, condividere pensieri e progetti in
-              totale autonomia e libertà.
-            </Typography>
-            <Link href="https://nomadlist.com/padova">source: nomadlist</Link>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="secondary">
-                    Secondary action
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="contained" color="secondary">
-                    Secondary action
-                  </Button>
-                </Grid>
-              </Grid>
-            </div>
+            <div className={classes.heroButtons}></div>
           </Container>
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
-          {/* End hero unit */}
+          {/* Card  */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card className={classes.card}>
+            <Grid item xs={12} sm={6} md={4}>
+              <Card className={classes.card}>
+                <CardActionArea href="/cities/valencia/cafedeco">
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
+                    image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic3.lasprovincias.es%2Fwww%2Fmultimedia%2F201810%2F29%2Fmedia%2Fcortadas%2Fcafe-madrid-valencia-kgUB-U6013967615186QB-624x385%40Las%2520Provincias.jpg&f=1&nofb=1"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Cafè deCO
                     </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
-                    </Typography>
+                    <Typography>Lorem ipsum</Typography>
                   </CardContent>
                   <CardActions>
                     <Button size="small" color="primary">
@@ -130,9 +91,36 @@ export default function Padova() {
                       Edit
                     </Button>
                   </CardActions>
-                </Card>
-              </Grid>
-            ))}
+                </CardActionArea>
+              </Card>
+            </Grid>
+            {/* Card  */}
+
+            <Grid item xs={12} sm={6} md={4}>
+              <Card className={classes.card}>
+                <CardActionArea href="/cities/valencia/#">
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image="https://metodo-zero.it/wp-content/uploads/2020/05/Worketteria-2-2048x1536.jpg"
+                    title="Image title"
+                  />
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      WayCO
+                    </Typography>
+                    <Typography>Description</Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      View
+                    </Button>
+                    <Button size="small" color="primary">
+                      Edit
+                    </Button>
+                  </CardActions>
+                </CardActionArea>
+              </Card>
+            </Grid>
           </Grid>
         </Container>
       </main>
