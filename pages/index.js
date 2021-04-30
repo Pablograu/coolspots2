@@ -15,7 +15,7 @@ export default function Home({ articles }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://raw.githubusercontent.com/JacopoContin/coolspots/main/.mockend.json");
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const articles = await res.json();
 
   return {
