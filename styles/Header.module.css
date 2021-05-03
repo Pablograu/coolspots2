@@ -24,5 +24,15 @@
 
 
 .logo {
-  height: 1em;
+  height: 1.5em;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
 }
