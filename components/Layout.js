@@ -1,16 +1,14 @@
 import styles from '../styles/Layout.module.css';
 import Navbar from '../components/Navbar';
+import { Container } from '@material-ui/core';
 
 const Layout = ({ children }) => {
     return (
         <>
         <Navbar />
-        <div className={styles.container}>
-            <main className={styles.main}>
-            
+        <Container>
                 {children}
-            </main>
-        </div>
+        </Container>
         </>
     )
 }

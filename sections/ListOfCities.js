@@ -9,12 +9,8 @@ import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-    display: "grid",
-    gridTemplateAreas: "header header header",
-    gridTemplateRows: "60px 1fr 60px",
-    gridTemplateColumns: "20% 1fr 15%",
+    padding: theme.spacing(2),
+    flexGrow: 1,
     gridGap: "10px",
     height: "100vh",
     margin: 0,
@@ -39,7 +35,7 @@ export default function ListOfCities() {
     >
       {/*PADOVA*/}
 
-      <Grid item xs={12} md={24}>
+      <Grid item xs md key={1}>
         <Card className={classes.root}>
           <CardActionArea href="/cities/padova">
             <CardMedia
@@ -62,7 +58,7 @@ export default function ListOfCities() {
       </Grid>
 
       {/*VALENCIA*/}
-      <Grid item xs={12} md={24}>
+      <Grid item xs={12} md={24} key={2}>
         <Card className={classes.root}>
           <CardActionArea href="/cities/valencia">
             <CardMedia

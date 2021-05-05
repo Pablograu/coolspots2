@@ -1,21 +1,21 @@
 import Head from "next/head";
 import ListOfCities from '../sections/ListOfCities'
 import Header from "../components/header";
-import {Container} from '@material-ui/core'
+import CssBaseline from "@material-ui/core/CssBaseline";
 
-
-
-export default function Home({ articles }) {
+export default function Home({ }) {
   return (
-    <div>
+    <>
+    <React.Fragment>
       <Head>
         <title>coolspots</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Container>
-      <ListOfCities />
-      </Container>
-    </div>
+      
+        <CssBaseline />
+        <Header />
+        <ListOfCities />
+      </React.Fragment>
+    </>
   );
 }
