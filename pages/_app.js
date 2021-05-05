@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-
 import Layout from '../components/Layout'
 
 
@@ -38,9 +37,8 @@ const theme = createMuiTheme({
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      
       <Layout>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
       </Layout>
     </ThemeProvider>
   );

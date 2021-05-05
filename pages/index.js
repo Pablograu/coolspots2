@@ -1,14 +1,22 @@
 import Head from "next/head";
-import ListOfCities from "../sections/ListOfCities";
+import ListOfCities from '../sections/ListOfCities'
+import Header from "../components/header";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
-export default function Home({cities }) {
+export default function Home({ }) {
   return (
-    <div>
+    <>
+    <React.Fragment>
       <Head>
         <title>coolspots</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ListOfCities />
+      
+        <CssBaseline />
+        <Header />
+        <ListOfCities />
+      </React.Fragment>
+    </>
     </div>
   );
 }
