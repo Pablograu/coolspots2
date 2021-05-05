@@ -65,7 +65,7 @@ export default function Padova() {
           <Grid container spacing={4}>
             <Grid item xs={12} sm={6} md={4}>
               <Card className={classes.card}>
-                <CardActionArea href="/cities/padova/metodozero">
+                <CardActionArea href="/cities/valencia/waycoabastos">
                   <CardMedia
                     className={classes.cardMedia}
                     image="https://hs.wayco.es/hubfs/team%20office%20la%20rueca%20(8)-2.jpg"
