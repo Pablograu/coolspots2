@@ -58,7 +58,6 @@ export default function Padova() {
             >
               Valencia
             </Typography>
-            <div className={classes.heroButtons}></div>
           </Container>
         <Container className={classes.cardGrid} maxWidth="md">
           {/* Card  */}

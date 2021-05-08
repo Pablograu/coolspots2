@@ -1,16 +1,13 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Grid from "@material-ui/core/Grid";
+
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
-import Header from "../../../components/header";
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -42,9 +39,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
   },
+  
 }));
+const tile = [
+ {
+     img: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FmZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+     title: 'Image',
+     author: 'author',
+     cols: 2,
+   },
+ ];
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function Padova() {
   const classes = useStyles();
@@ -79,63 +84,20 @@ export default function Padova() {
               totale autonomia e libertà.
             </Typography>
             <Link href="https://nomadlist.com/padova">source: nomadlist</Link>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="secondary">
-                    Secondary action
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="contained" color="secondary">
-                    Secondary action
-                  </Button>
-                </Grid>
-              </Grid>
-            </div>
+            
           </Container>
+          
+
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
-          {/* End hero unit */}
-          <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+        <GridList cellHeight={160} className={classes.gridList} cols={3}>
+
+          <GridListTile key={tile.img} cols={tile.cols || 1}>
+            <img src={tile.img} alt={tile.title} />
+          </GridListTile>
+      </GridList>
         </Container>
       </main>
-
-      {/* End footer */}
     </React.Fragment>
   );
 }

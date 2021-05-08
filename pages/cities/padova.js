@@ -10,6 +10,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import { Paragraph } from "evergreen-ui";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -63,7 +64,7 @@ export default function Padova() {
             >
               Padova
             </Typography>
-            <div className={classes.heroButtons}></div>
+            <Paragraph>Padua is a city and comune in Veneto, northern Italy. Padua is on the river Bacchiglione, west of Venice. It is the capital of the province of Padua. It is also the economic and communications hub of the area. Padua's population is 214,000.</Paragraph>
           </Container>
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
