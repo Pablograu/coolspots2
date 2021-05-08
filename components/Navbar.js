@@ -19,6 +19,9 @@ const Navbar = () => {
         <li>
           <Link href="/about">About</Link>
         </li>
+        <li>
+          <Link href="/howitworks">How it works</Link>
+        </li>
       </ul>
     </nav>
   );
