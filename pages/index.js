@@ -17,6 +17,6 @@ export default function Home({ }) {
         <ListOfCities />
       </React.Fragment>
     </>
-    </div>
+
   );
 }
