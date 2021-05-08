@@ -1,15 +1,16 @@
 import Link from "next/link";
 import navStyles from "../styles/Nav.module.css";
 import headerStyles from "../styles/Header.module.css";
+import { Button } from "@material-ui/core";
 
 const Navbar = () => {
   return (
     <nav className={navStyles.nav}>
       <a href="/">
           <img
-            src="/coolspots-mini.svg"
+            src="/coolspots.svg"
             alt="Coolspots Logo"
-            className={headerStyles.logo}
+            height="32px"
           />
         </a>
       <ul>
@@ -22,7 +23,12 @@ const Navbar = () => {
         <li>
           <Link href="/howitworks">How it works</Link>
         </li>
+        <li>
+          <Link href="/pricing">Pricing</Link>
+        </li>
       </ul>
+      <Link href="/signin"><Button variant="contained">Login</Button></Link>
+      
     </nav>
   );
 };
