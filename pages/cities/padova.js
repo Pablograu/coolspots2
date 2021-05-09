@@ -1,7 +1,5 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -10,12 +8,9 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import { Paragraph } from "evergreen-ui";
+
 
 const useStyles = makeStyles((theme) => ({
-  icon: {
-    marginRight: theme.spacing(2),
-  },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 6),
@@ -44,16 +39,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 export default function Padova() {
   const classes = useStyles();
+  const metodoZeroImg = "https://images.unsplash.com/photo-1620455804128-6e90bd608e1a?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60";
 
   return (
     <React.Fragment>
       <CssBaseline />
 
-      <main>
+      <main className={classes.heroContent}>
         {/* Hero unit */}
-        <div className={classes.heroContent}>
+
           <Container maxWidth="sm">
             <Typography
               component="h1"
@@ -64,9 +62,14 @@ export default function Padova() {
             >
               Padova
             </Typography>
-            <Paragraph>Padua is a city and comune in Veneto, northern Italy. Padua is on the river Bacchiglione, west of Venice. It is the capital of the province of Padua. It is also the economic and communications hub of the area. Padua's population is 214,000.</Paragraph>
+            <Typography
+            variant="h5"
+            align="center"
+            color="textSecondary"
+            paragraph
+            >Padua is a city and comune in Veneto, northern Italy. Padua is on the river Bacchiglione, west of Venice. It is the capital of the province of Padua. It is also the economic and communications hub of the area. Padua's population is 214,000.</Typography>
           </Container>
-        </div>
+
         <Container className={classes.cardGrid} maxWidth="md">
           {/* Card  */}
           <Grid container spacing={4}>
@@ -75,7 +78,7 @@ export default function Padova() {
                 <CardActionArea href="/cities/padova/metodozero">
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://metodo-zero.it/wp-content/uploads/2020/05/Worketteria-2-2048x1536.jpg"
+                    image={metodoZeroImg}
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
@@ -91,14 +94,6 @@ export default function Padova() {
                       libertà.
                     </Typography>
                   </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
-                  </CardActions>
                 </CardActionArea>
               </Card>
             </Grid>
@@ -118,14 +113,6 @@ export default function Padova() {
                     </Typography>
                     <Typography>Description</Typography>
                   </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
-                  </CardActions>
                 </CardActionArea>
               </Card>
             </Grid>
